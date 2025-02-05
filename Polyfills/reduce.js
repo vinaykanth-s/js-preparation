@@ -1,7 +1,7 @@
 const arr = [1, 2, 3, 4, 5];
 
 let res = arr.reduce((acc, cur) => acc + cur, 0);
-console.log(res);
+console.log(res, 'default');
 
 Array.prototype.myReduce = function (callback, initialValue) {
   let accumulator = initialValue;
@@ -12,4 +12,4 @@ Array.prototype.myReduce = function (callback, initialValue) {
 };
 
 let res2 = arr.myReduce((acc, cur) => acc + cur, 0);
-console.log(res2);
+console.log(res2, 'polyfill');

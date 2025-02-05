@@ -1,7 +1,7 @@
 const arr = [1, 2, 3, 4, 5];
 
 const res = arr.filter((num) => num > 3);
-console.log(res);
+console.log(res, 'default');
 
 Array.prototype.myFilter = function (callback) {
   const result = [];
@@ -14,4 +14,4 @@ Array.prototype.myFilter = function (callback) {
 };
 
 const res2 = arr.myFilter((num) => num > 3);
-console.log(res2);
+console.log(res2, 'polyfill');
